@@ -1,0 +1,172 @@
+body{
+    height:2000px;
+}
+p{
+    font-size:600%;
+    font-family:Arial;
+    font-weight:bold;
+}
+/*CONTENU*/
+
+.navpropos{
+    margin-left: 230px;
+    font-size: 25px;
+
+}
+
+.navinscription{
+    margin-left: 230px;
+    font-size: 25px;
+}
+
+.navcontact{
+    margin-left: 230px;
+    font-size: 25px;
+    
+}
+
+#contenu{
+    width:100%;
+    height:900px;
+    background-image:url(../image/accueil/fond2.jpg);
+    background-size:cover;
+}
+
+#slogan{
+    position:relative;
+    width:100%;
+    height:200px;
+    top: 10%;
+    text-align:center;
+    color: rgb(50,50,50);
+}
+#logo{
+    margin-top:-120px;
+    margin-left: 30px;
+}
+#login{
+    position:relative;
+    width:400px;
+    height:350px;
+    margin-top: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color:rgba(255,255,255,0.82);
+}
+
+.slogann {
+    font-size: 35px;
+    margin-top: -30px;
+}
+
+.about {
+    font-size: 20px;
+    margin-top: 10px;
+}
+#email{
+    position:relative;
+    width:80%;
+    height:20%;
+    /* background-color:green;*/
+    left:10%;
+    top:50px;
+    text-align:center;
+}
+#password{
+    position:relative;
+    width:80%;
+    height:20%;
+    /* background-color:green;*/
+    left:10%;
+    top:100px;
+    text-align:center;
+}
+#submit{
+    position:relative;
+    width:50%;
+    height:20%;
+    left:25%;
+    top:150px;
+    text-align:center;
+    /*background-color:black;*/
+}
+.input{
+    width:180px;
+    height:40px;
+    text-align:center;
+}
+.input2{
+    text-align:center;
+}
+#connexion{
+    width:200px;
+    height:40px;
+
+}
+#lien{
+    position:relative;
+    width:66%;
+    height:20%;
+    left:17%;
+    top:165px;
+    text-align:center;
+}
+/*CONTENU1*/
+#contenu1{
+    width:100%;
+    height:400px;
+    background-color:blue;
+
+}
+
+#paragraphe{
+    font-size:20px;
+    text-align:center;
+}
+h1{
+    text-align:center;
+}
+.titre{
+    text-align:center;
+    background-color:rgba(150,165,2,0.18);
+    color: rgb(120,50,50);
+    font-weight: bold;
+}
+.row{
+    text-align:center;
+}
+.input1{
+    width:400px;
+    height:50px;
+}
+#contact{
+    font-size:20px;
+}
+.col-md-2{
+    text-align:center;
+    padding-top:25px;
+}
+.footer{
+    height:70px;
+    background-color:#003366;
+}
+#map{
+    margin:20px;
+    height:400px;
+    width:600px;
+    border: 2px solid black;
+}
+#contact{
+    margin-left: 20%;
+    margin-top: 5%;
+}
+.sign{
+    background-color:rgba(238,120,0,0.4);
+    margin:20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.logoo{
+    margin-top: 160px;
+}

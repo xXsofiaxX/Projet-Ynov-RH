@@ -1,0 +1,167 @@
+html
+  head
+    link(href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css', rel='stylesheet', integrity='sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7', crossorigin='anonymous')
+    title
+  body
+    link(rel='stylesheet', href='stylesheet/style.css')
+    form#FormQuestions.form-horizontal(action='' method='get')
+      fieldset
+        // Form Name
+        legend Form Name
+        // Multiple Radios (inline)
+        .form-group
+          label.col-md-4.control-label(for='langue-1') Langue
+          .col-md-4
+            label.radio-inline(for='langue-1-0')
+              input#langue-1-0(type='radio', name='langue-1', value='fr')
+              |       Français
+            label.radio-inline(for='langue-1-1')
+              input#langue-1-1(type='radio', name='langue-1', value='en')
+              |       Anglais
+            label.radio-inline(for='langue-1-2')
+              input#langue-1-2(type='radio', name='langue-1', value='du')
+              |       Allemand
+            label.radio-inline(for='langue-1-3')
+              input#langue-1-3(type='radio', name='langue-1', value='du')
+              |       Espagnol
+        // Multiple Radios (inline)
+        .form-group
+          label.col-md-4.control-label(for='niveau-1') Niveau de la langue
+          .col-md-4
+            label.radio-inline(for='niveau-1-0')
+              input#niveau-1-0(type='radio', name='niveau-1', value='f')
+              |       Faible
+            label.radio-inline(for='niveau-1-1')
+              input#niveau-1-1(type='radio', name='niveau-1', value='s')
+              |       Scolaire
+            label.radio-inline(for='niveau-1-2')
+              input#niveau-1-2(type='radio', name='niveau-1', value='b')
+              |       Bien
+            label.radio-inline(for='niveau-1-3')
+              input#niveau-1-3(type='radio', name='niveau-1', value='tb')
+              |       Très bien
+            label.radio-inline(for='niveau-1-4')
+              input#niveau-1-4(type='radio', name='niveau-1', value='n')
+              |       Natale
+        // Multiple Checkboxes
+        .form-group
+          label.col-md-4.control-label(for='ajout-langue')
+          .col-md-4
+            .checkbox
+              label(for='ajout-langue-0')
+                input#ajout-langue-0(type='checkbox', name='ajout-langue', value='oui', onclick='affiche();')
+                |       Ajouter une langue
+        // Multiple Radios (inline)
+        .hide-group-lang
+          .form-group
+            label.col-md-4.control-label(for='langue-2') 2ème Langue
+            .col-md-4
+              label.radio-inline(for='langue-2-0')
+                input#langue-2-0(type='radio', name='langue-2', value='Français')
+                |       Français
+              label.radio-inline(for='langue-2-1')
+                input#langue-2-1(type='radio', name='langue-2', value='Anglais')
+                |       Anglais
+              label.radio-inline(for='langue-2-2')
+                input#langue-2-2(type='radio', name='langue-2', value='Allemand')
+                |       Allemand
+              label.radio-inline(for='langue-2-3')
+                input#langue-2-3(type='radio', name='langue-2', value='Espagnol')
+                |       Espagnol
+          // Multiple Radios (inline)
+          .form-group
+            label.col-md-4.control-label(for='niveau-2') Niveau de la deuxième langue
+            .col-md-4
+              label.radio-inline(for='niveau-2-0')
+                input#niveau-2-0(type='radio', name='niveau-2', value='f')
+                |       Faible
+              label.radio-inline(for='niveau-2-1')
+                input#niveau-2-1(type='radio', name='niveau-2', value='s')
+                |       Scolaire
+              label.radio-inline(for='niveau-2-2')
+                input#niveau-2-2(type='radio', name='niveau-2', value='b')
+                |       Bien
+              label.radio-inline(for='niveau-2-3')
+                input#niveau-2-3(type='radio', name='niveau-2', value='tb')
+                |       Très bien
+              label.radio-inline(for='niveau-2-4')
+                input#niveau-2-4(type='radio', name='niveau-2', value='n')
+                |       Natale
+        // Select Basic
+        .form-group
+          label.col-md-4.control-label(for='select-activity') Secteur 
+          .col-md-4
+            select#select-activity.form-control(name='select-activity', onchange='Activity();')
+              option(value='tc') Technologue créatif
+              option(value='ux') Designer UX / UI
+              option(value='da') Directeur artistique
+              option(value='gd') Game designer
+              option(value='gi') Graphiste illustrateur 2D/3D
+              option(value='gm') Graphiste multimédia
+              option(value='illu') Illustrateur
+              option(value='icono') Iconographe
+              option(value='ld') Level designer
+              option(value='m3d') Modeleur 3D
+              option(value='wd') Web designer
+              option(value='sjv') Script de jeux vidéo
+              option(value='rea3d') Réalisateur 3D
+              option(value='peintre') Peintre en décors
+        // Multiple Radios (inline)
+        .form-group
+          label.col-md-4.control-label(for='annee-xp') Année d’expérience dans ce domaine entre
+          .col-md-4
+            label.radio-inline(for='annee-xp-0')
+              input#annee-xp-0(type='radio', name='annee-xp', value='2m')
+              |       2 et 12 mois
+            label.radio-inline(for='annee-xp-1')
+              input#annee-xp-1(type='radio', name='annee-xp', value='2y')
+              |       1 et 2 ans
+            label.radio-inline(for='annee-xp-2')
+              input#annee-xp-2(type='radio', name='annee-xp', value='3y')
+              |       3 et 4 ans
+            label.radio-inline(for='annee-xp-3')
+              input#annee-xp-3(type='radio', name='annee-xp', value='4y')
+              |       3 et 4 ans
+            label.radio-inline(for='annee-xp-4')
+              input#annee-xp-4(type='radio', name='annee-xp', value='5y')
+              |       5 et 8 ans
+            label.radio-inline(for='annee-xp-5')
+              input#annee-xp-5(type='radio', name='annee-xp', value='plus')
+              |       Plus
+        // Multiple Radios (inline)
+        .form-group
+          label.col-md-4.control-label(for='teletravail') Le télétravail vous dérange t-il ?
+          .col-md-4
+            label.radio-inline(for='teletravail-0')
+              input#teletravail-0(type='radio', name='teletravail', value='y')
+              |       oui
+            label.radio-inline(for='teletravail-1')
+              input#teletravail-1(type='radio', name='teletravail', value='n')
+              |       non
+        // Multiple Radios (inline)
+        .form-group
+          label.col-md-4.control-label(for='internationale') Les missions internationale ?
+          .col-md-4
+            label.radio-inline(for='internationale-0')
+              input#internationale-0(type='radio', name='internationale', value='y')
+              |       oui
+            label.radio-inline(for='internationale-1')
+              input#internationale-1(type='radio', name='internationale', value='n')
+              |       non
+        // Select Basic
+        .form-group
+          label.col-md-4.control-label(for='contrat') Quel type de contrat cherchez vous ?
+          .col-md-4
+            select#contrat.form-control(name='contrat', onchange='Contrat()')
+              option(value='cdd') CDD
+              option(value='cdi') CDI
+              option(value='cp') Contrat Pro
+              option(value='missions') Missions
+        // Button
+        .form-group
+          label.col-md-4.control-label(for='valider')
+          .col-md-4
+            button#valider.btn.btn-primary(name='valider') Valider
+  script(src='https://code.jquery.com/jquery-2.2.1.min.js')
+  script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js', integrity='sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS', crossorigin='anonymous')
+  script(type='text/javascript', src='app.js')

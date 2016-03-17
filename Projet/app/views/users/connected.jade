@@ -1,0 +1,45 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    // La balise <meta/> permet de paramétrer le viewport, c'est à dire la zone affichable.
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    // ajout du lien CSS
+    link(rel='stylesheet', type='text/css', href='stylesheet/accueil.css')
+    // ajout du lien pour bootsrap
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css', integrity='sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7', crossorigin='anonymous')
+    // ajout du lien pour la map
+    link(rel='stylesheet', href='http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css')
+    title  Acceuil 
+  body(onload='init()')
+    // -----HEADER-----
+    nav.navbar.navbar-default.navbar-fixed-top
+      .container-fluid
+        // Brand and toggle get grouped for better mobile display
+        .navbar-header
+          button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1', aria-expanded='false')
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand(href='index.html')
+            img(alt='Brand', src='image/accueil/logo_home.png', width='30px', height='30px')
+        // Collect the nav links, forms, and other content for toggling
+        #bs-example-navbar-collapse-1.collapse.navbar-collapse
+          ul.nav.navbar-nav
+            li
+              a.navpropos(href='#') About
+            li
+              a.navinscription(href='#') Sign up
+            li
+              a.navcontact(href='#') Contact
+        // /.navbar-collapse
+      // /.container-fluid
+    // -----CONTENU-----
+    #contenu
+      #slogan
+        p SCROLL JOB'S
+        br
+        p.slogann UN COUP DE POUCE POUR VOS RECHERCHES
+        br
+    bienvenue #{title}
