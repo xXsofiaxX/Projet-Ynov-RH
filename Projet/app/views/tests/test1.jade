@@ -1,0 +1,66 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    // La balise <meta/> permet de paramétrer le viewport, c'est à dire la zone affichable.
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    // ajout du lien CSS
+    link(rel='stylesheet', type='text/css', href='stylesheet/connect.css')
+    // ajout du lien pour bootsrap
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css', integrity='sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7', crossorigin='anonymous')
+    // ajout du lien pour la map
+    link(rel='stylesheet', href='http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css')
+    title  Acceuil 
+  body
+    nav.navbar.navbar-default.navbar-fixed-top
+      .container-fluid
+        // Brand and toggle get grouped for better mobile display
+        .navbar-header
+          button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1', aria-expanded='false')
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand.navbar-left(href='/')
+            img(alt='Brand', src='image/connect/profile.jpg', width='30px', height='30px')
+        // Collect the nav links, forms, and other content for toggling
+        #bs-example-navbar-collapse-1.collapse.navbar-collapse
+          ul.nav.navbar-nav
+            li
+              a(href='#') Liste des tests
+            li
+              a(href='#') Je ne sais pas
+            li
+              a(href='#') Je sais encore moins
+        // /.navbar-collapse
+      // /.container-fluid
+    #titre
+      h1 Passez vos test ici!
+    .container-fluid
+      .row.ligne1
+        .col-md-3.col-sm-6.col-xs-6
+          img.img-responsive(src='image/connect/test1.jpg')
+        .col-md-3.col-sm-6.col-xs-6
+          p
+            | AboutLorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis esse ex aliquam odio nihil nobis quibusdam dignissimos atque, mollitia quo non autem amet eligendi aut provident, voluptates id minima soluta.
+        .col-md-3.col-sm-6.col-xs-6
+        a(href='' method='get')
+          img.img-responsive(src='image/connect/test1.jpg')
+        .col-md-3.col-sm-6.col-xs-6
+          p
+            | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni quis, eos aliquam in fugit, ipsum blanditiis repellendus modi qui odio a expedita sapiente quae vitae, sed nesciunt neque. Cum, tenetur.
+    .container-fluid
+      .row.ligne2
+        .col-md-3.col-sm-6.col-xs-6
+          img.img-responsive(src='image/connect/test1.jpg')
+        .col-md-3.col-sm-6.col-xs-6
+          p
+            | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis esse ex aliquam odio nihil nobis quibusdam dignissimos atque, mollitia quo non autem amet eligendi aut provident, voluptates id minima soluta.
+        .col-md-3.col-sm-6.col-xs-6
+          img.img-responsive(src='image/connect/test1.jpg')
+        .col-md-3.col-sm-6.col-xs-6
+          p
+            | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni quis, eos aliquam in fugit, ipsum blanditiis repellendus modi qui odio a expedita sapiente quae vitae, sed nesciunt neque. Cum, tenetur.
+  // Partie Permettant la gestion du Jquery
+  script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js')
+  script(src='../bootstrap/js/bootstrap.min.js')

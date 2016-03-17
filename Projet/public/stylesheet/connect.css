@@ -1,0 +1,45 @@
+ #titre{
+    text-align: center;
+    height: 150px;
+     width: auto;
+     background-color: rgba(150,165,2,0.2);
+     padding-top: 60px;
+}
+
+.ligne1 {
+    margin-top: 30px;
+}
+
+.ligne2 {
+    margin-top: 30px;
+}
+
+#toggler {
+    margin-left: 45%;
+    color:white;
+    background-color: forestgreen;
+}
+
+.ligne3 {
+    height: 200px;
+}
+
+p{
+    font-weight: bold;
+}
+
+.formu1 {
+    margin-top: 200px;
+}
+
+.bouton {
+    margin-top: 30px;
+    
+    position: relative;
+    left:70%;
+    background-color: chartreuse;
+    color: white;
+    height: 40px;
+    width: 100px;
+    
+}
