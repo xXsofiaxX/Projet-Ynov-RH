@@ -1,0 +1,177 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    // La balise <meta/> permet de paramétrer le viewport, c'est à dire la zone affichable.
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    // ajout du lien CSS
+    link(rel='stylesheet', type='text/css', href='stylesheet/accueil.css')
+    // ajout du lien pour bootsrap
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css', integrity='sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7', crossorigin='anonymous')
+    // ajout du lien pour la map
+    link(rel='stylesheet', href='http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css')
+    title  Acceuil 
+  body(onload='init()')
+    // -----HEADER-----
+    nav.navbar.navbar-default.navbar-fixed-top
+      .container-fluid
+        // Brand and toggle get grouped for better mobile display
+        .navbar-header
+          button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1', aria-expanded='false')
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand(href='index.html')
+            img(alt='Brand', src='image/accueil/logo_home.png', width='30px', height='30px')
+        // Collect the nav links, forms, and other content for toggling
+        #bs-example-navbar-collapse-1.collapse.navbar-collapse
+          ul.nav.navbar-nav
+            li
+              a.navpropos(href='#') About
+            li
+              a.navinscription(href='#') Sign up
+            li
+              a.navcontact(href='#') Contact
+        // /.navbar-collapse
+      // /.container-fluid
+    // -----CONTENU-----
+    #contenu
+      #slogan
+        p SCROLL JOB'S
+        br
+        p.slogann UN COUP DE POUCE POUR VOS RECHERCHES #{title}
+        br
+      #logo
+        img(src='image/accueil/logo_scrolljobs.jpg', width='100px', height='100px')
+      #login
+        form(action='../' method='post')
+          #email
+            input.input(type='text', placeholder='Email' name='email', required='')
+          #password
+            input.input(type='password', placeholder='mot de passe' name='password', required='')
+          #submit
+            input#connexion.input2(type='submit', value='connexion')
+        #lien
+          a(href='#') Pas encore de compte?
+          br
+          a(href='#') mot de passe oublié
+    // CONTENU2 ABOUT
+    .container-fluid
+      .row.titre
+        h1 ABOUT
+      .row
+        .col-md-6
+          p.about
+            | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis esse ex aliquam odio nihil nobis quibusdam dignissimos atque, mollitia quo non autem amet eligendi aut provident, voluptates id minima soluta. Lorem ipsum dolor sit amet, consectetur adipisicing elit. In inventore sed officiis quia eveniet, quo dignissimos deleniti. Assumenda eos, harum a voluptate, eligendi at hic et tempore accusantium commodi totam!
+        .col-md-6
+          p.about
+            | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis esse ex aliquam odio nihil nobis quibusdam dignissimos atque, mollitia quo non autem amet eligendi aut provident, voluptates id minima soluta. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic officia atque, deleniti blanditiis voluptatum totam cumque tenetur. Aperiam eveniet quod ab? Ipsa necessitatibus rem repellendus, adipisci! Eum quam cumque voluptas.
+    // CONTENU3 SIGN UP
+    .container-fluid
+      .row.titre
+        h1 SIGN UP
+      .row
+        .col-md-4.logoo
+          img(src='image/accueil/logo_scrolljobs.jpg')
+        .col-md-4.sign
+          form(action='/signUp' method='post')
+            br
+            br
+            .row
+              input.input1(type='text', placeholder='firstName', name='firstName' required='')
+              br
+              br
+              input.input1(type='text', placeholder='name' name='name', required='')
+            br
+            br
+            .row
+              input.input1(type='text', placeholder='email' name='email', required='')
+            br
+            br
+            .row
+              input.input1(type='password', placeholder='password' name='password', required='')
+              br
+              br
+              input.input1(type='password', placeholder='passwordConfirmation' name='passwordConfirmation', required='')
+              br
+              br
+              input.input1(type='text' , name='recruiters')
+            .row
+              br
+              br
+              input(type='submit', value='Confirmer', width='200px')
+              br
+              br
+        .col-md-4.logoo
+          img(src='image/accueil/logo_scrolljobs.jpg')
+    // CONTENU4 CONTACT
+    .container-fluid
+      .row.titre
+        h1 CONTACTEZ-NOUS
+      .col-md-6
+        p#contact
+          br
+          br
+          | 		Pour nous contacter
+          br
+          br
+          img(src='image/accueil/logo_telephone.png', width='18px', height='18px')
+          | 		Telephone:+33145454545
+          br
+          br
+          img(src='image/accueil/logo_fax.png', width='18px', height='18px')
+          | 		Fax:+33145454546
+          br
+          br
+          img(src='image/accueil/logo_mail.jpeg', width='25px', height='18px')
+          | 		Mail:Contact@scrolljobs.com
+          br
+          br
+          br
+          br
+      #map.col-md-6
+      script(type='text/javascript', src='http://maps.googleapis.com/maps/api/js?sensor=false')
+      script(type='text/javascript').
+        function initialisation(){
+        var centreCarte = new google.maps.LatLng(47.389982, 0.688877);
+        var optionsCarte = {
+        zoom: 8
+        center: centreCarte
+        }
+        var maCarte = new google.maps.Map(document.getElementById("EmplacementDeMaCarte"), optionsCarte);
+        }
+      script(src='http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js')
+      script(type='text/javascript').
+        function init(){
+        //Creation d'un objet map avec certains params (position sur la map et zoom)
+        var map = L.map('map',{zoomControl:false}).setView([48.697936, 6.214196], 16);
+        // Ajout du "layer" (genre la map dessiner quoi) sur la map
+        L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 20,
+        }).addTo(map);
+        //Création d'une variable marker + ajout sur la map
+        var marker = L.marker([48.697936, 6.214196]).addTo(map);
+        }
+      noscript
+        p Attention : 
+        p Afin de pouvoir utiliser Google Maps, JavaScript doit être activé.
+        p
+          | Or, il semble que JavaScript est désactivé ou qu'il ne soit pas supporté par votre navigateur.
+        p
+          | Pour afficher Google Maps, activez JavaScript en modifiant les options de votre navigateur, puis essayez à nouveau.
+    // -----FOOTER------
+    .container-fluid
+      .row.footer
+        .col-md-2
+          img(src='image/accueil/logo_twitter.png', width='25px', height='25px')
+        .col-md-2
+          img(src='image/accueil/logo_facebook.png', width='25px', height='25px')
+        .col-md-2
+          a(href='#') FAQ
+        .col-md-2
+          a(href='#') Mention légale
+        .col-md-4
+  // Partie Permettant la gestion du Jquery
+  script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js')
+  script(src='../bootstrap/js/bootstrap.min.js')
