@@ -1,9 +1,11 @@
+require('../models/User');
 var mongoose = require('mongoose'), // Nous appelons le module mongoose
     Schema = mongoose.Schema; // Nous créons un schéma mongoose
 
 
 var schema = new Schema({
-    nbrQuestion: Number
+    User : User,
+    Score : Number
 });
 
 

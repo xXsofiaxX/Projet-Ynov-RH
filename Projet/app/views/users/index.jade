@@ -40,13 +40,12 @@ html
       #slogan
         p SCROLL JOB'S
         br
-        p.slogann UN COUP DE POUCE POUR VOS RECHERCHES
+        p.slogann UN COUP DE POUCE POUR VOS RECHERCHES #{title}
         br
-        #{title}
       #logo
         img(src='image/accueil/logo_scrolljobs.jpg', width='100px', height='100px')
       #login
-        form(action='/tests' method='post')
+        form(action='../' method='post')
           #email
             input.input(type='text', placeholder='Email' name='email', required='')
           #password
@@ -76,7 +75,7 @@ html
         .col-md-4.logoo
           img(src='image/accueil/logo_scrolljobs.jpg')
         .col-md-4.sign
-          form(action='/' method='post')
+          form(action='/signUp' method='post')
             br
             br
             .row
@@ -95,6 +94,9 @@ html
               br
               br
               input.input1(type='password', placeholder='passwordConfirmation' name='passwordConfirmation', required='')
+              br
+              br
+              input.input1(type='text' , name='recruiters')
             .row
               br
               br

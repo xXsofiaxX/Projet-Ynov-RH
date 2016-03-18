@@ -5,5 +5,6 @@ var recruiters = require('../controllers/Recruiters'); // Nous allons récuperer
 
 /* GET Récupère la liste des utilisateurs */
 router.get('/', recruiters.index);
+router.get('/resultat',recruiters.affich);
 
 module.exports = router;

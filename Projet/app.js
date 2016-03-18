@@ -4,7 +4,6 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-var sess=require('express-session');
 
 var users = require('./app/routes/users');
 var recruiters = require('./app/routes/recruiters');
@@ -23,18 +22,20 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(sess({secret: 'iT s A secRet DonT tELl AnY0ne'}));
+
 
 app.use('/', users);
 app.use('/recruiters',recruiters);
 app.use('/tests',tests);
-app.use('/tests/test2',tests);
-app.use('/tests/test3',tests);
+app.use('/tests2',tests);
+app.use('/resultat',recruiters);
+app.use('/recruiters/index.html',users);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
-  console.log('caca');
-  res.render('users/index');
+  var err = new Error('Not Found');
+  err.status = 404;
+  next(err);
 });
 
 // error handlers
